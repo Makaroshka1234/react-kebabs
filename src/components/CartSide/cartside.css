@@ -1,0 +1,89 @@
+.cardside {
+    min-height: 100vh;
+    width: 40%;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    display: none;
+    right: 0;
+    transform: translateX(805px);
+    transition: all 0.3s ease;
+
+
+
+}
+
+.cardside.active {
+
+    transform: translateX(0);
+
+    display: flex;
+
+}
+
+.cardside__inner {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.cardside-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px 25px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    ;
+}
+
+.top-title {}
+
+.cart__close-btn {}
+
+.cart__close-btn {
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.cart__close-btn:hover {
+    transform: rotate(3.142rad);
+}
+
+.cardide__bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cardside__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F1F1F1;
+    padding: 35px 15px 35px 15px;
+
+    margin-top: auto;
+}
+
+.cardside__price-text {
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.cardside_btn {
+    padding: 16px 41px;
+    background-color: #D72200;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5em;
+    border-radius: .3125rem;
+}
+
+.cardside_btn:hover {
+    background-color: black;
+}

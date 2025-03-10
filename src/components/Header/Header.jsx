@@ -2,7 +2,11 @@ import React from 'react'
 import './header.css'
 import BurgerMenu from './BurgerMenu'
 
-const Header = () => {
+const Header = ({ activeCart, setActiveCart }) => {
+
+    function addActive() {
+        setActiveCart(true)
+    }
     return (
         <header className="header">
 
@@ -35,8 +39,8 @@ const Header = () => {
                     </li>
                 </ul>
                 <div className="header__location"></div>
-                <div className="cart">
-                    <img src="images/cart.svg" alt="" className="cart-img" />
+                <div className="cart" >
+                    <img src="images/cart.svg" alt="" className="cart-img" onClick={addActive} />
                     <p className="cart-price">1000 $</p>
                 </div>
                 <BurgerMenu />

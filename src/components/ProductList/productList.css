@@ -1,0 +1,41 @@
+.product__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+}
+
+.product__list-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 335px;
+    align-items: flex-start;
+}
+
+.product-img {
+    min-width: 100%;
+}
+
+.item-weight {
+    background-color: #D72200;
+    text-align: center;
+    padding: 0 .5rem;
+    border-radius: 0.3125rem;
+    display: inline-block;
+    color: white;
+}
+
+.product__item-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.item-hour {
+    display: flex;
+    gap: 5px;
+}

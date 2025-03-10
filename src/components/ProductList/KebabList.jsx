@@ -15,25 +15,36 @@ const KebabList = () => {
     console.log(items);
 
     return (
+        <div className="container">
+            <div className="kebab__list-inner">
+                <ul className='product__list'>
+                    {Array.isArray(items) && items.map(item => (
+                        <li className="product__list-item">
+                            <img src={item.imgUrl} alt="" className='product-img' />
+                            <div className="list__item-inner">
 
-        <ul className='product__list'>
-            {Array.isArray(items) && items.map(item => (
-                <li className="product__list-item">
-                    <img src={item.imgUrl} alt="" className='product-img' />
-                    <p>{item.title}</p>
-                    <p className="item-weight">{item.weight} г</p>
-                    <p className="description">{item.description}</p>
-                    <div className="product__item-bottom">
-                        <p className="item__price">{item.price}</p>
-                        <div className="item-hour">
-                            <img src="" alt="" />
-                            <p>{item.time}</p>
-                        </div>
-                    </div>
-                </li>
+                                <p className='item-title'>{item.title}</p>
+                                <p className="item-weight">{item.weight} г</p>
+                                <p className="item-description">{item.description}</p>
+                                <div className="product__item-bottom">
+                                    <div className="item-price-time">
+                                        <p className="item__price">{item.price} грн.</p>
+                                        <div className="item-hour">
+                                            <img src="images/clock.svg" alt="" className='item-clock-img' />
+                                            <p className='item-time-text'>{item.time} хвилин</p>
 
-            ))}
-        </ul>
+                                        </div>
+
+                                    </div>
+                                    <button className="purshare-btn"><span>В корзину</span></button>
+                                </div>
+                            </div>
+                        </li>
+
+                    ))}
+                </ul>
+            </div>
+        </div>
 
     )
 }

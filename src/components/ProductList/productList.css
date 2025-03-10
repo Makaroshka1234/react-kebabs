@@ -1,6 +1,6 @@
 .product__list {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
     align-items: center;
 
@@ -10,10 +10,23 @@
 .product__list-item {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: 10px;
+    box-shadow: 6px 9px 24px rgba(161, 161, 161, 0.44);
+    border-radius: 15px;
     max-width: 335px;
     align-items: flex-start;
+    align-items: center;
+    background-color: #fff;
+}
+
+.product-img {
+    border-radius: 0 15px;
+    width: 100%;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .product-img {
@@ -27,15 +40,58 @@
     border-radius: 0.3125rem;
     display: inline-block;
     color: white;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.item-description {
+    margin-bottom: 10px;
 }
 
 .product__item-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-price-time {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
+.item__price {
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
 .item-hour {
     display: flex;
+    justify-content: space-between;
     gap: 5px;
+
 }
+
+.item-clock-img {
+    height: 25px;
+    width: 25px;
+}
+
+.item-time-text {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.purshare-btn {
+    padding: 10px 15px;
+    background-color: #D72200;
+}
+
+.kebab__list-inner {}

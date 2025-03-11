@@ -34,6 +34,12 @@
     text-transform: uppercase;
 }
 
+.header__list-item.active {
+    color: #D72200;
+
+}
+
+
 .list__item-inner {
     padding: 10px;
 }

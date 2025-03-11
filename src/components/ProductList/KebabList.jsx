@@ -1,25 +1,25 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './productList.css'
+import { useItems } from '../../providers/ItemsProvider'
 const KebabList = () => {
-    const [items, setItems] = React.useState([])
 
+    const { items, activeCategory } = useItems()
 
-    React.useEffect(() => {
-        axios.get('https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs').then(res => {
-            setItems(res.data)
-        })
+    let filterItems = items.filter(item => item.category === `${activeCategory}`)
 
-    }, []);
+    useEffect(() => {
+        console.log(filterItems);
 
-    console.log(items);
+    }, [activeCategory])
 
     return (
+
         <div className="container">
             <div className="kebab__list-inner">
                 <ul className='product__list'>
-                    {Array.isArray(items) && items.map(item => (
-                        <li className="product__list-item">
+                    {filterItems.map(item => (
+                        <li key={item.id} className="product__list-item">
                             <img src={item.imgUrl} alt="" className='product-img' />
                             <div className="list__item-inner">
 
@@ -42,6 +42,7 @@ const KebabList = () => {
                         </li>
 
                     ))}
+
                 </ul>
             </div>
         </div>

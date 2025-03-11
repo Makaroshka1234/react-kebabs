@@ -8,6 +8,7 @@ const CartSide = ({ activeCart, setActiveCart }) => {
     }
 
     return (
+
         <div className={`cardside ${activeCart ? 'active' : ''}`} >
             <div className="cardside__inner">
                 <div className="cardside-top">
@@ -26,6 +27,7 @@ const CartSide = ({ activeCart, setActiveCart }) => {
             </div>
 
         </div>
+
     )
 }
 

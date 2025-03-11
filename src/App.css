@@ -7,6 +7,12 @@
 html {
   margin: 0;
   padding: 0;
+
+
+}
+
+body {
+  overflow-x: hidden;
 }
 
 ul {
@@ -39,10 +45,7 @@ button {
   margin: 0 auto;
 }
 
-body {
-  position: relative;
 
-}
 
 .wrapper {
   display: flex;
@@ -50,4 +53,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-image: url(/public/images/main-bg.svg);
+  background-size: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
 }

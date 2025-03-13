@@ -4,7 +4,7 @@ import './productList.css'
 import { useItems } from '../../providers/ItemsProvider'
 const KebabList = () => {
 
-    const { items, activeCategory } = useItems()
+    const { items, activeCategory, addItemCart } = useItems()
 
     let filterItems = items.filter(item => item.category === `${activeCategory}`)
 
@@ -12,6 +12,11 @@ const KebabList = () => {
         console.log(filterItems);
 
     }, [activeCategory])
+
+    function checkItem(item) {
+        console.log(item);
+
+    }
 
     return (
 
@@ -36,12 +41,15 @@ const KebabList = () => {
                                         </div>
 
                                     </div>
-                                    <button className="purshare-btn"><span>В корзину</span></button>
+                                    <button className="purshare-btn" onClick={() => addItemCart(item)} ><span>В корзину</span></button>
                                 </div>
                             </div>
                         </li>
 
+
+
                     ))}
+
 
                 </ul>
             </div>

@@ -9,6 +9,7 @@ import { useItems } from '../providers/ItemsProvider'
 import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
 import QuestionSection from '../components/QuestionSection/QuestionSection'
 import ReviewSection from '../components/ReviewSection/ReviewSection'
+import AnotherProductSection from '../components/AnotherProductSection/AnotherProductSection'
 
 const Home = () => {
     const BodyRef = React.useRef(document.body)
@@ -52,7 +53,7 @@ const Home = () => {
                 <KebabList />
                 <AdvantageSection />
                 <QuestionSection />
-
+                <AnotherProductSection />
                 <Footer />
 
             </div>

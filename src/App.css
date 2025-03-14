@@ -53,7 +53,7 @@ button {
   min-height: 100vh;
   margin: 0;
   background-image: url(/public/images/main-bg.svg);
-  background-size: 200%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

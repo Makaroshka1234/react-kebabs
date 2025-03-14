@@ -6,6 +6,9 @@ import CartSide from '../components/CartSide/CartSide'
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection'
 import axios from 'axios'
 import { useItems } from '../providers/ItemsProvider'
+import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
+import QuestionSection from '../components/QuestionSection/QuestionSection'
+import ReviewSection from '../components/ReviewSection/ReviewSection'
 
 const Home = () => {
     const BodyRef = React.useRef(document.body)
@@ -45,8 +48,11 @@ const Home = () => {
 
                 <Header activeCart={activeCart} setActiveCart={setActiveCart} />
                 <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+                <FranchiseSection />
                 <KebabList />
                 <AdvantageSection />
+                <QuestionSection />
+
                 <Footer />
 
             </div>

@@ -32,7 +32,7 @@ const CartSide = ({ activeCart, setActiveCart }) => {
             <div className="cardside__inner">
                 <div className="cardside-top">
                     <h1 className="top-title">Корзина</h1>
-                    <img src="images/close.svg" alt="" className='cart__close-btn' onClick={removeActiveCart} />
+                    <img src="/images/close.svg" alt="" className='cart__close-btn' onClick={removeActiveCart} />
                 </div>
                 <ul ref={listRef} className='cardside__list'>
                     {cartItems.length <= 0 ? 'Ваша корзина порожня' : cartItems.map(item => (

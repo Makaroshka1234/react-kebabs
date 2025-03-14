@@ -1,0 +1,19 @@
+.franchise {
+
+    display: flex;
+    justify-content: center;
+
+
+    margin-bottom: 100px;
+
+}
+
+.franchise__inner {
+    width: 90vw;
+    height: 80vh;
+}
+
+.franchise-img {
+    width: 100%;
+    height: 100%;
+}

@@ -35,7 +35,7 @@ const KebabList = () => {
                                     <div className="item-price-time">
                                         <p className="item__price">{item.price} грн.</p>
                                         <div className="item-hour">
-                                            <img src="images/clock.svg" alt="" className='item-clock-img' />
+                                            <img src="/images/clock.svg" alt="" className='item-clock-img' />
                                             <p className='item-time-text'>{item.time} хвилин</p>
 
                                         </div>

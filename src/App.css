@@ -40,8 +40,14 @@ button {
   background-color: transparent;
 }
 
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .container {
-  max-width: 1500px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 

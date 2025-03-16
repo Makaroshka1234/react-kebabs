@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import { Link } from 'react-router'
 
 
 const Footer = () => {
@@ -13,7 +14,9 @@ const Footer = () => {
                                 <h2 className="list-title">Навігація</h2>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">Про нас</p>
+                                <Link to={'/aboutUs'} >
+                                    <p className="list-title">Про нас</p>
+                                </Link>
                             </li>
                             <li className='footer__list-item'>
                                 <p className="list-title">Контакти</p>
@@ -22,7 +25,9 @@ const Footer = () => {
                                 <p className="list-title">Блог</p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">Доставка та оплата</p>
+                                <Link to={'/deliveryandpayment'} >
+                                    <p className="list-title">Доставка та оплата</p>
+                                </Link>
                             </li>
                             <li className='footer__list-item'>
                                 <p className="list-title">Вхід</p>

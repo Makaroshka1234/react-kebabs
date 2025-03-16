@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import './productList.css'
 import { useItems } from '../../providers/ItemsProvider'
+import { Link } from 'react-router'
 const KebabList = () => {
 
     const { items, activeCategory, addItemCart } = useItems()
@@ -24,13 +25,18 @@ const KebabList = () => {
             <div className="kebab__list-inner">
                 <ul className='product__list'>
                     {filterItems.map(item => (
-                        <li key={item.id} className="product__list-item">
-                            <img src={item.imgUrl} alt="" className='product-img' />
-                            <div className="list__item-inner">
 
-                                <p className='item-title'>{item.title}</p>
-                                <p className="item-weight">{item.weight} г</p>
-                                <p className="item-description">{item.description}</p>
+                        <li key={item.id} className="product__list-item">
+
+                            <div className="list__item-inner">
+                                <Link to={`/product/` + item.id}>
+                                    <img src={item.imgUrl} alt="" className='product-img' />
+
+
+                                    <p className='item-title'>{item.title}</p>
+                                    <p className="item-weight">{item.weight} г</p>
+                                    <p className="item-description">{item.description}</p>
+                                </Link>
                                 <div className="product__item-bottom">
                                     <div className="item-price-time">
                                         <p className="item__price">{item.price} грн.</p>

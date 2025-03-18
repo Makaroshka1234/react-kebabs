@@ -12,7 +12,10 @@
     z-index: 4;
 }
 
-
+.item-delete-btn {
+    height: 20px;
+    width: 20px;
+}
 
 .cardside.active {
     right: 0;

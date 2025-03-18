@@ -19,7 +19,7 @@ const Home = () => {
 
 
     React.useEffect(() => {
-        axios.get('https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs').then(res => {
+        axios.get('https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs?raiting=5&page=1&limit=8').then(res => {
             setItems(res.data)
 
         })

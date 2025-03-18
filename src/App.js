@@ -10,24 +10,32 @@ import DeliveryPayment from './pages/DeliveryPayment';
 import Product from './pages/Product';
 import { useEffect } from 'react';
 import ScrollTop from './components/ScrollTop';
+
+import { Provider } from 'react-redux'
+import { store } from './redux/store';
+
 function App() {
 
 
   return (
     <div className="App">
-      <ItemsProvider>
-        <BrowserRouter>
-          <ScrollTop />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/categories/:categoryName' element={<Category />} />
-            <Route path='/aboutUs' element={<AboutUs />} />
-            <Route path='/deliveryandpayment' element={<DeliveryPayment />} />
-            <Route path='/product/:id' element={<Product />} />
+      <Provider store={store}>
+        <ItemsProvider>
 
-          </Routes>
-        </BrowserRouter>
-      </ItemsProvider>
+          <BrowserRouter>
+            <ScrollTop />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/categories/:categoryName' element={<Category />} />
+              <Route path='/aboutUs' element={<AboutUs />} />
+              <Route path='/deliveryandpayment' element={<DeliveryPayment />} />
+              <Route path='/product/:id' element={<Product />} />
+
+            </Routes>
+          </BrowserRouter>
+
+        </ItemsProvider>
+      </Provider>
     </div>
   );
 }

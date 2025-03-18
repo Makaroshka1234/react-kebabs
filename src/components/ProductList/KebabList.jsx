@@ -3,14 +3,19 @@ import React, { useEffect } from 'react'
 import './productList.css'
 import { useItems } from '../../providers/ItemsProvider'
 import { Link } from 'react-router'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../redux/slices/CartSlice'
+
 const KebabList = () => {
 
-    const { items, activeCategory, addItemCart } = useItems()
+    const dispatch = useDispatch()
+
+    const { items, activeCategory, setItems } = useItems()
 
     let filterItems = items.filter(item => item.category === `${activeCategory}`)
 
     useEffect(() => {
-        console.log(filterItems);
+        setItems(filterItems)
 
     }, [activeCategory])
 
@@ -24,7 +29,7 @@ const KebabList = () => {
         <div className="container">
             <div className="kebab__list-inner">
                 <ul className='product__list'>
-                    {filterItems.map(item => (
+                    {items.map(item => (
 
                         <li key={item.id} className="product__list-item">
 
@@ -47,7 +52,7 @@ const KebabList = () => {
                                         </div>
 
                                     </div>
-                                    <button className="purshare-btn" onClick={() => addItemCart(item)} ><span>В корзину</span></button>
+                                    <button className="purshare-btn" onClick={() => dispatch(addToCart(item))} ><span>В корзину</span></button>
                                 </div>
                             </div>
                         </li>

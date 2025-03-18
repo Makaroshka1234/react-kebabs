@@ -42,7 +42,7 @@
 
 
 .list__item-inner {
-    padding: 10px;
+    padding: 5px;
 }
 
 .list-item-img {
@@ -51,7 +51,7 @@
 }
 
 .list-item-title {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700;
     transition: color 0.5s ease;
 }

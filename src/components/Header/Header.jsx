@@ -3,6 +3,7 @@ import './header.css'
 import BurgerMenu from './BurgerMenu'
 import { useItems } from '../../providers/ItemsProvider'
 import { Link, useParams } from 'react-router'
+import { useSelector } from 'react-redux'
 
 
 
@@ -41,7 +42,11 @@ const Category = () => {
 
 
 const Header = ({ activeCart, setActiveCart }) => {
+
     const { category, activeCategory, setActiveCategory } = useItems()
+
+    const { totalPrice } = useSelector(state => state.cart)
+
     function addActive() {
         setActiveCart(true)
     }
@@ -56,7 +61,7 @@ const Header = ({ activeCart, setActiveCart }) => {
                 <div className="header__location"></div>
                 <div className="cart" >
                     <img src="/images/cart.svg" alt="" className="cart-img" onClick={addActive} />
-                    <p className="cart-price">1000 $</p>
+                    <p className="cart-price">{totalPrice} грн</p>
                 </div>
                 <BurgerMenu />
             </div>

@@ -14,7 +14,7 @@ export const ItemsProvider = ({ children }) => {
         console.log(cartItems, 'cart');
 
     }
-    const [activeCategory, setActiveCategory] = useState(0)
+    const [activeCategory, setActiveCategory] = useState(null)
 
     const [items, setItems] = useState([])
 

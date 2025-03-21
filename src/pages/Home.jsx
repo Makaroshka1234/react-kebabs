@@ -55,9 +55,9 @@ const Home = () => {
             <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
             <SideMenu />
             <FranchiseSection />
-            <KebabList />
+            {/* <KebabList /> */}
             {/* <AdvantageSection /> */}
-            <QuestionSection />
+            {/* <QuestionSection /> */}
             {/* <AnotherProductSection />
             <Footer /> */}
 

@@ -16,11 +16,14 @@ const BurgerMenu = () => {
         ;
 
     return (
+
         <div className={`burger-menu ${isActive ? 'open' : ''}`} onClick={() => dispatch(setIsActive(isActive))}>
             <span></span>
             <span></span>
             <span></span>
         </div>
+
+
     )
 }
 

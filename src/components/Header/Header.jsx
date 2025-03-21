@@ -59,6 +59,7 @@ const Header = ({ activeCart, setActiveCart }) => {
         <header className="header">
 
             <div className="header__inner">
+
                 <Link to="/">
                     <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" />
                 </Link>
@@ -69,6 +70,7 @@ const Header = ({ activeCart, setActiveCart }) => {
                     <p className="cart-price">{totalPrice} грн</p>
                 </div>
                 <BurgerMenu />
+
             </div>
 
         </header>

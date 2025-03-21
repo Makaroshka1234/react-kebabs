@@ -8,11 +8,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 
 }
 
 .kebab__list-inner {
     max-width: 100%;
+
+
 }
 
 .product__list-item {
@@ -125,6 +128,21 @@
 .kebab__list-inner {}
 
 
-@media (max-width:1400px) {}
+@media (max-width:682px) {
+    .product-img {
+        max-width: 50%;
+    }
+
+    .product__list-item {
+        display: flex;
+        font-size: 14px;
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    .list__item-inner {
+        flex-direction: row;
+    }
+}
 
 @media (max-width:1084px) {}

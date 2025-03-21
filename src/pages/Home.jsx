@@ -56,10 +56,10 @@ const Home = () => {
             <SideMenu />
             <FranchiseSection />
             <KebabList />
-            <AdvantageSection />
+            {/* <AdvantageSection /> */}
             <QuestionSection />
-            <AnotherProductSection />
-            <Footer />
+            {/* <AnotherProductSection />
+            <Footer /> */}
 
 
 

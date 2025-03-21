@@ -1,6 +1,6 @@
 .cardside {
     min-height: 100vh;
-    width: 40%;
+    width: 50%;
     background-color: #fff;
     position: fixed;
 
@@ -82,7 +82,7 @@
 }
 
 .cardside_btn {
-    padding: 16px 41px;
+    padding: 1rem 2rem;
     background-color: #D72200;
     color: #fff;
     font-weight: 700;
@@ -146,4 +146,10 @@
 .minus-btn {
     padding: 5px;
     background-color: #fff;
+}
+
+@media (max-width:503px) {
+    .cardside {
+        width: 100%;
+    }
 }

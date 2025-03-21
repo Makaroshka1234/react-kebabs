@@ -4,9 +4,12 @@ import { useParams } from 'react-router'
 import { useItems } from '../../providers/ItemsProvider';
 
 import './style.css'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/slices/CartSlice';
 
 const ProductSection = () => {
 
+    const dispatch = useDispatch()
     const { id } = useParams()
     console.log(id);
     const { items, setItems } = useItems()
@@ -39,7 +42,7 @@ const ProductSection = () => {
                                 <input type="text" />
                                 <button className='plus-btn'>+</button>
                             </div>
-                            <button className="cart-btn"><span>В корзину</span> <img src="/images/cart.svg" alt="" className='cart-img' /></button>
+                            <button className="cart-btn" onClick={() => dispatch(addToCart(items))} ><span>В корзину</span> <img src="/images/cart.svg" alt="" className='cart-img' /></button>
                         </div>
                     </aside>
 

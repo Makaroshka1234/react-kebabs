@@ -19,23 +19,25 @@ function App() {
 
   return (
     <div className="App">
-      <Provider store={store}>
-        <ItemsProvider>
+      <div className='wrapper'>
+        <Provider store={store}>
+          <ItemsProvider>
 
-          <BrowserRouter>
-            <ScrollTop />
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/categories/:categoryName' element={<Category />} />
-              <Route path='/aboutUs' element={<AboutUs />} />
-              <Route path='/deliveryandpayment' element={<DeliveryPayment />} />
-              <Route path='/product/:id' element={<Product />} />
+            <BrowserRouter>
+              <ScrollTop />
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/categories/:categoryName' element={<Category />} />
+                <Route path='/aboutUs' element={<AboutUs />} />
+                <Route path='/deliveryandpayment' element={<DeliveryPayment />} />
+                <Route path='/product/:id' element={<Product />} />
 
-            </Routes>
-          </BrowserRouter>
+              </Routes>
+            </BrowserRouter>
 
-        </ItemsProvider>
-      </Provider>
+          </ItemsProvider>
+        </Provider>
+      </div>
     </div>
   );
 }

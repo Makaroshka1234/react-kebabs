@@ -1,10 +1,18 @@
+.kebab-list {
+    width: 100%;
+
+    margin-bottom: 100px;
+}
+
 .product__list {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 100px;
+    gap: 15px;
 
+}
+
+.kebab__list-inner {
+    max-width: 100%;
 }
 
 .product__list-item {
@@ -12,10 +20,21 @@
     flex-direction: column;
     box-shadow: 6px 9px 24px rgba(161, 161, 161, 0.44);
     border-radius: 15px;
+
     max-width: 335px;
-    align-items: flex-start;
     align-items: center;
     background-color: #fff;
+
+}
+
+.list__item-inner {
+
+    max-height: 512px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 10px 10px;
+    gap: 5px;
+
 }
 
 .product-img {
@@ -29,9 +48,7 @@
     margin-bottom: 10px;
 }
 
-.product-img {
-    width: 100%;
-}
+
 
 .item-weight {
     background-color: #D72200;
@@ -58,6 +75,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .item__price {
@@ -81,7 +99,7 @@
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400;
     font-size: 1.1em;
-    margin-bottom: 30px;
+
 }
 
 .description {
@@ -92,6 +110,21 @@
 .purshare-btn {
     padding: 10px 15px;
     background-color: #D72200;
+    border-radius: 10px;
+    max-width: 40%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.purshare-btn:hover {
+    background-color: #f32a04;
 }
 
 .kebab__list-inner {}
+
+
+@media (max-width:1400px) {}
+
+@media (max-width:1084px) {}

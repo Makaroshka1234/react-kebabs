@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './header.css'
 import BurgerMenu from './BurgerMenu'
 import { useItems } from '../../providers/ItemsProvider'
@@ -12,6 +12,8 @@ import { useSelector } from 'react-redux'
 
 const Category = () => {
     const { category, activeCategory, setActiveCategory } = useItems()
+
+
 
     function logCat(id) {
         setActiveCategory(id)
@@ -28,13 +30,14 @@ const Category = () => {
         <ul className="header__category-list">
             {category.map((category, catId) => (
                 <Link to={`/categories/${category}`}>
-                    <li key={catId} className={`header__list-item ${activeCategory === catId ? 'active' : ''}`}>
+                    <li key={catId} className={`header__list-item ${activeCategory === catId ? 'active' : ''}`} onClick={() => setActiveCategory(catId)} >
                         <img src="/images/kebab.svg" alt="" className="list-item-img" />
-                        <p className="list-item-title" onClick={() => logCat(catId)}>{category}</p>
+                        <p className="list-item-title" >{category}</p>
                     </li>
                 </Link>
-            ))}
-        </ul>
+            ))
+            }
+        </ul >
     )
 }
 
@@ -47,6 +50,8 @@ const Header = ({ activeCart, setActiveCart }) => {
 
     const { totalPrice } = useSelector(state => state.cart)
 
+
+
     function addActive() {
         setActiveCart(true)
     }
@@ -55,7 +60,7 @@ const Header = ({ activeCart, setActiveCart }) => {
 
             <div className="header__inner">
                 <Link to="/">
-                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" onClick={() => setActiveCategory()} />
+                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" />
                 </Link>
                 <Category />
                 <div className="header__location"></div>

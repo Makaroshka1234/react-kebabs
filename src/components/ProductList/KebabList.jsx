@@ -12,60 +12,52 @@ const KebabList = () => {
 
     const { items, activeCategory, setItems } = useItems()
 
-    let filterItems = items.filter(item => item.category === `${activeCategory}`)
 
-    useEffect(() => {
-        setItems(filterItems)
 
-    }, [activeCategory])
 
-    function checkItem(item) {
-        console.log(item);
-
-    }
 
     return (
+        <section className="kebab-list">
+            <div className="container">
+                <div className="kebab__list-inner">
+                    <ul className='product__list'>
+                        {Array.isArray(items) && items.map(item => (
 
-        <div className="container">
-            <div className="kebab__list-inner">
-                <ul className='product__list'>
-                    {items.map(item => (
-
-                        <li key={item.id} className="product__list-item">
-
-                            <div className="list__item-inner">
-                                <Link to={`/product/` + item.id}>
-                                    <img src={item.imgUrl} alt="" className='product-img' />
+                            <li key={item.id} className="product__list-item">
+                                <img src={item.imgUrl} alt="" className='product-img' />
+                                <div className="list__item-inner">
+                                    <Link to={`/product/` + item.id}>
 
 
-                                    <p className='item-title'>{item.title}</p>
-                                    <p className="item-weight">{item.weight} г</p>
-                                    <p className="item-description">{item.description}</p>
-                                </Link>
-                                <div className="product__item-bottom">
-                                    <div className="item-price-time">
-                                        <p className="item__price">{item.price} грн.</p>
-                                        <div className="item-hour">
-                                            <img src="/images/clock.svg" alt="" className='item-clock-img' />
-                                            <p className='item-time-text'>{item.time} хвилин</p>
+
+                                        <p className='item-title'>{item.title}</p>
+                                        <p className="item-weight">{item.weight} г</p>
+                                        <p className="item-description">{item.description}</p>
+                                    </Link>
+                                    <div className="product__item-bottom">
+                                        <div className="item-price-time">
+                                            <p className="item__price">{item.price} грн.</p>
+                                            <div className="item-hour">
+                                                <img src="/images/clock.svg" alt="" className='item-clock-img' />
+                                                <p className='item-time-text'>{item.time} хвилин</p>
+
+                                            </div>
 
                                         </div>
-
+                                        <button className="purshare-btn" onClick={() => dispatch(addToCart(item))} ><span>В корзину</span></button>
                                     </div>
-                                    <button className="purshare-btn" onClick={() => dispatch(addToCart(item))} ><span>В корзину</span></button>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
 
 
-                    ))}
+                        ))}
 
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-
+        </section>
     )
 }
 

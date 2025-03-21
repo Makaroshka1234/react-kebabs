@@ -9,19 +9,24 @@ import axios from 'axios'
 
 import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
 import { useItems } from '../providers/ItemsProvider'
+import SideMenu from '../components/futhers/SideMenu/SideMenu'
 
 
 const Category = () => {
 
-    const { items, setItems } = useItems()
+    const { items, setItems, activeCategory } = useItems()
+
 
     React.useEffect(() => {
-        axios.get('https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs').then(res => {
-            setItems(res.data)
+        if (activeCategory !== undefined) {
+            axios.get(`https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs?category=${activeCategory}`).then(res => {
+                setItems(res.data)
+            }
+            ).catch(err => console.log('error axios'));
 
-        })
+        }
 
-    }, []);
+    }, [activeCategory]);
 
     const [activeCart, setActiveCart] = React.useState(false)
 
@@ -30,16 +35,16 @@ const Category = () => {
 
 
     return (
-        <div className="wrapper">
+        <>
 
             <Header activeCart={activeCart} setActiveCart={setActiveCart} />
             <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-
+            <SideMenu />
             <KebabList />
 
             <Footer />
 
-        </div>
+        </>
     )
 }
 

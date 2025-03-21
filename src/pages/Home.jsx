@@ -10,6 +10,8 @@ import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
 import QuestionSection from '../components/QuestionSection/QuestionSection'
 import ReviewSection from '../components/ReviewSection/ReviewSection'
 import AnotherProductSection from '../components/AnotherProductSection/AnotherProductSection'
+import { useNavigation } from 'react-router'
+import SideMenu from '../components/futhers/SideMenu/SideMenu'
 
 const Home = () => {
     const BodyRef = React.useRef(document.body)
@@ -41,22 +43,25 @@ const Home = () => {
     }, [activeCart])
 
 
+
+
     return (
         <>
 
 
-            <div className="wrapper">
 
-                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
-                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-                <FranchiseSection />
-                <KebabList />
-                <AdvantageSection />
-                <QuestionSection />
-                <AnotherProductSection />
-                <Footer />
 
-            </div>
+            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+            <SideMenu />
+            <FranchiseSection />
+            <KebabList />
+            <AdvantageSection />
+            <QuestionSection />
+            <AnotherProductSection />
+            <Footer />
+
+
 
         </>
     )

@@ -9,13 +9,13 @@ const DeliveryPayment = () => {
 
     return (
 
-        <div className="wrapper">
+        <>
             <Header activeCart={activeCart} setActiveCart={setActiveCart} />
 
             <Delivery />
             <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
             <Footer />
-        </div>
+        </>
 
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../components/Header/Header'
-import KebabList from '../components/ProductList/KebabList'
+import ProductList from '../components/ProductList/ProductList'
 import Footer from '../components/Footer/Footer'
 import CartSide from '../components/CartSide/CartSide'
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection'
@@ -64,11 +64,11 @@ const Home = () => {
 
             <SideMenu />
             <FranchiseSection />
-            <KebabList />
-            <AdvantageSection />
+            <ProductList />
+            {/* <AdvantageSection /> */}
             <QuestionSection />
             <AnotherProductSection />
-            <Footer />
+            {/* <Footer /> */}
 
 
 

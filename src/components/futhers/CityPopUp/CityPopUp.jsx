@@ -18,7 +18,7 @@ const CityPopUp = ({ activePop, setActivePop }) => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (popupRef.current && !popupRef.current.contains(event.target)) {
-                setActivePop(false); // Закриваємо попап, якщо клік був поза ним
+                setActivePop(false);
             }
         };
 

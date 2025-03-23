@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/slices/CartSlice'
 
-const KebabList = () => {
+const ProductList = () => {
 
     const dispatch = useDispatch()
 
@@ -28,9 +28,6 @@ const KebabList = () => {
                                 <img src={item.imgUrl} alt="" className='product-img' />
                                 <div className="list__item-inner">
                                     <Link to={`/product/` + item.id}>
-
-
-
                                         <p className='item-title'>{item.title}</p>
                                         <p className="item-weight">{item.weight} г</p>
                                         <p className="item-description">{item.description}</p>
@@ -62,4 +59,4 @@ const KebabList = () => {
     )
 }
 
-export default KebabList
+export default ProductList

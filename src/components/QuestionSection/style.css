@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1.1rem;
+    justify-content: center;
 
 }
 
@@ -70,3 +71,32 @@
 }
 
 .number {}
+
+@media (max-width:963px) {
+    .question__list {
+        padding: 0 26px 0 26px;
+    }
+
+    .number-section {
+        width: 42px;
+        height: 42px;
+    }
+
+    .question-answer {
+        max-height: none;
+    }
+
+    .question__list-item {}
+}
+
+@media (max-width:538px) {
+    .question__section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:442px) {
+    .question__section-title {
+        font-size: 1.6rem;
+    }
+}

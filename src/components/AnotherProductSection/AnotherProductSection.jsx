@@ -11,7 +11,6 @@ const AnotherProductSection = () => {
                     <h2>Також в нашій мережі</h2>
                     <div className="box">
                         <a href="#">
-
                             <div className="stake__house-box">
                                 <img src="/images/steyk.jpeg" alt="" className="stake-house-img" />
                                 <img src="/images/stake-logo.svg" alt="" className='box-logo' />

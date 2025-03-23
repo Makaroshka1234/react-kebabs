@@ -21,17 +21,11 @@
     cursor: pointer;
 }
 
-.footer__list p span:hover {
-    color: #D72200;
-
-}
-
-.footer__list.nav p:hover {
-    color: #D72200;
-}
-
+.footer__list p span:hover,
+.footer__list.nav p:hover,
 .footer__list.menu p:hover {
     color: #D72200;
+
 }
 
 .footer__list p {

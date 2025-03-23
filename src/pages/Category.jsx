@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from '../components/Header/Header'
-import KebabList from '../components/ProductList/KebabList'
+import ProductList from '../components/ProductList/ProductList'
 import Footer from '../components/Footer/Footer'
 import CartSide from '../components/CartSide/CartSide'
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection'
@@ -40,7 +40,7 @@ const Category = () => {
             <Header activeCart={activeCart} setActiveCart={setActiveCart} />
             <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
             <SideMenu />
-            <KebabList />
+            <ProductList />
 
             <Footer />
 

@@ -19,14 +19,14 @@
 .box {
     width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .stake__house-box {
     overflow: hidden;
-
+    padding: 0 15px 0 15px;
     height: 31.25rem;
-    border-radius: 15px;
+    border-radius: 30px;
     position: relative;
 }
 
@@ -36,6 +36,7 @@
     height: 100%;
     transform: none;
     transition: all 0.5s ease-in-out;
+    border-radius: 30px;
 
 }
 
@@ -52,4 +53,23 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media (max-width:1044px) {
+    .box {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width:590px) {
+    .stake__house-box {
+        height: 17.8rem;
+    }
+}
+
+@media (max-width:530px) {
+    .another__product__inner h2 {
+        font-size: 2rem;
+    }
 }

@@ -27,5 +27,5 @@ export const ItemsProvider = ({ children }) => {
     );
 };
 
-// Хук для використання контексту
+
 export const useItems = () => useContext(ItemsContext);

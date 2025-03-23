@@ -62,11 +62,12 @@ button {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   background-image: url(/public/images/main-bg.svg);
-  background-size: cover;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 1000%;
   width: 100%;
 }

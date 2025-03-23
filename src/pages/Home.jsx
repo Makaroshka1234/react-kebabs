@@ -57,21 +57,24 @@ const Home = () => {
         <>
 
 
-            {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
-                : ''}
-            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
-            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-
-            <SideMenu />
-            <FranchiseSection />
-            <ProductList />
-            {/* <AdvantageSection /> */}
-            <QuestionSection />
-            <AnotherProductSection />
-            {/* <Footer /> */}
+            {/* {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
+                : ''} */}
 
 
+            <div className="wrapper">
+                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
 
+                <SideMenu />
+                <FranchiseSection />
+                <ProductList />
+                {/* <AdvantageSection /> */}
+                <QuestionSection />
+                <AnotherProductSection />
+                <Footer />
+
+
+            </div>
         </>
     )
 }

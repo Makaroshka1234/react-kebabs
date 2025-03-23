@@ -36,14 +36,14 @@ const Category = () => {
 
     return (
         <>
+            <div className="wrapper">
+                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+                <SideMenu />
+                <ProductList />
 
-            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
-            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-            <SideMenu />
-            <ProductList />
-
-            <Footer />
-
+                <Footer />
+            </div>
         </>
     )
 }

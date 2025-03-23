@@ -11,12 +11,14 @@ const DeliveryPayment = () => {
     return (
 
         <>
-            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+            <div className="wrapper">
+                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
 
-            <Delivery />
-            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-            <SideMenu />
-            <Footer />
+                <Delivery />
+                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+                <SideMenu />
+                <Footer />
+            </div>
         </>
 
     )

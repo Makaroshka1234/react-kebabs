@@ -12,11 +12,13 @@ const Product = () => {
 
     return (
         <>
-            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
-            <ProductSection />
-            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-            <SideMenu />
-            <Footer />
+            <div className="wrapper">
+                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+                <ProductSection />
+                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+                <SideMenu />
+                <Footer />
+            </div>
         </>
     )
 }

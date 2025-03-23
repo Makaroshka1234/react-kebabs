@@ -9,50 +9,52 @@ const Footer = () => {
             <div className="container">
                 <div className="footer__inner">
                     <div className="footer-top">
-                        <ul className="footer__list nav">
-                            <li className='footer__list-item'>
-                                <h2 className="list-title">Навігація</h2>
-                            </li>
-                            <li className='footer__list-item'>
-                                <Link to={'/aboutUs'} >
-                                    <p className="list-title">Про нас</p>
-                                </Link>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Контакти</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Блог</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <Link to={'/deliveryandpayment'} >
-                                    <p className="list-title">Доставка та оплата</p>
-                                </Link>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Вхід</p>
-                            </li>
-                        </ul>
-                        <ul className="footer__list menu">
-                            <li className='footer__list-item'>
-                                <h2 className="list-title">Меню</h2>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Кебаб</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Комбо меню</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Страви</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Соуси</p>
-                            </li>
-                            <li className='footer__list-item'>
-                                <p className="list-title">Напої</p>
-                            </li>
-                        </ul>
+                        <div className="footer-box">
+                            <ul className="footer__list">
+                                <li className='footer__list-item'>
+                                    <h2 className="list-title">Навігація</h2>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <Link to={'/aboutUs'} >
+                                        <p className="list-title">Про нас</p>
+                                    </Link>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Контакти</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Блог</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <Link to={'/deliveryandpayment'} >
+                                        <p className="list-title">Доставка та оплата</p>
+                                    </Link>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Вхід</p>
+                                </li>
+                            </ul>
+                            <ul className="footer__list menu">
+                                <li className='footer__list-item'>
+                                    <h2 className="list-title">Меню</h2>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Кебаб</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Комбо меню</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Страви</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Соуси</p>
+                                </li>
+                                <li className='footer__list-item'>
+                                    <p className="list-title">Напої</p>
+                                </li>
+                            </ul>
+                        </div>
                         <div className="footer-center">
                             <img src="/images/footer-logo.svg" alt="" className="footer-logo" />
                             <ul className="footer__social-list">
@@ -102,9 +104,9 @@ const Footer = () => {
 
                             </ul>
                         </div>
-                        <ul className="footer__list">
+                        <ul className="footer__list contacts">
                             <li className='footer__list-item'>
-                                <h2 className="list-title">Контакти</h2>
+                                <h2 className="list-title-contact">Контакти</h2>
                             </li>
                             <li className='footer__list-item'>
                                 <p className="list-title">Номер доставки <br />  <span>+380 (63) 113 40 49</span></p>
@@ -125,7 +127,7 @@ const Footer = () => {
                                 <p className="list-title">м. Львів, вулиця Садова 2а <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Іоанна Павла ІІ, 4б (ринок «Шувар») <br /> <span> +38 (063) 790 54 50 </span></p>
+                                <p className="list-title">м. Львів, вул. Січових Стрільців 11<br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
                                 <p className="list-title">м. Львів, вулиця Чернівецька, 11/13 <br /><span> +38 (063) 790 54 50 </span></p>

@@ -11,10 +11,12 @@ const AboutUs = () => {
     return (
 
         <>
-            <Header activeCart={activeCart} setActiveCart={setActiveCart} />
-            <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
-            <SideMenu />
-            <Footer />
+            <div className="wrapper">
+                <Header activeCart={activeCart} setActiveCart={setActiveCart} />
+                <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+                <SideMenu />
+                <Footer />
+            </div>
         </>
 
     )

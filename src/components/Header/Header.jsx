@@ -55,13 +55,15 @@ const Header = ({ activeCart, setActiveCart }) => {
     function addActive() {
         setActiveCart(true)
     }
+
+
     return (
         <header className="header">
 
             <div className="header__inner">
 
                 <Link to="/">
-                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" />
+                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" onClick={() => setActiveCategory()} />
                 </Link>
                 <Category />
                 <div className="header__location"></div>

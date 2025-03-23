@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header/Header'
 import KebabList from '../components/ProductList/KebabList'
 import Footer from '../components/Footer/Footer'
@@ -12,8 +12,16 @@ import ReviewSection from '../components/ReviewSection/ReviewSection'
 import AnotherProductSection from '../components/AnotherProductSection/AnotherProductSection'
 import { useNavigation } from 'react-router'
 import SideMenu from '../components/futhers/SideMenu/SideMenu'
+import CityPopUp from '../components/futhers/CityPopUp/CityPopUp'
+
+
 
 const Home = () => {
+
+
+
+    const [activePop, setActivePop] = useState(false)
+
     const BodyRef = React.useRef(document.body)
 
 
@@ -25,7 +33,7 @@ const Home = () => {
             setItems(res.data)
 
         })
-
+        setActivePop(true)
     }, []);
 
     const [activeCart, setActiveCart] = React.useState(false)
@@ -49,17 +57,18 @@ const Home = () => {
         <>
 
 
-
-
+            {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
+                : ''}
             <Header activeCart={activeCart} setActiveCart={setActiveCart} />
             <CartSide activeCart={activeCart} setActiveCart={setActiveCart} />
+
             <SideMenu />
             <FranchiseSection />
-            {/* <KebabList /> */}
-            {/* <AdvantageSection /> */}
-            {/* <QuestionSection /> */}
-            {/* <AnotherProductSection />
-            <Footer /> */}
+            <KebabList />
+            <AdvantageSection />
+            <QuestionSection />
+            <AnotherProductSection />
+            <Footer />
 
 
 

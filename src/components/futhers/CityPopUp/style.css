@@ -1,0 +1,92 @@
+.city__pop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+
+
+.city-popup__icon {
+    position: fixed;
+    top: 0
+}
+
+.btn-close-box {
+    position: relative;
+
+}
+
+.pop-close-btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: #D72200;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -3.8rem;
+    top: -2.75rem;
+
+}
+
+.pop-close-btn img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pop-close-btn img:hover {
+    transform: rotate(180deg);
+}
+
+.pop__inner {
+    background-color: #fff;
+    max-width: 52.5rem;
+    padding: 75px 30px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.pop-box {
+    padding: 4.6875rem 1.875rem 5.9375rem;
+    margin-left: auto;
+    max-width: 25rem;
+
+}
+
+.pop-title {
+    font-weight: bold;
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.pop-description {
+    font-size: 1.1rem;
+    max-width: 400px;
+}
+
+.drop-down {}
+
+
+
+.city-btn {
+    display: flex;
+    max-width: 18.125rem;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+    height: 3.75rem;
+    background-color: #D72200;
+    align-items: center;
+    justify-content: center;
+}

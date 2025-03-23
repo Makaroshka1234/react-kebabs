@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="container">
                 <div className="footer__inner">
                     <div className="footer-top">
-                        <ul className="footer__list">
+                        <ul className="footer__list nav">
                             <li className='footer__list-item'>
                                 <h2 className="list-title">Навігація</h2>
                             </li>
@@ -33,7 +33,7 @@ const Footer = () => {
                                 <p className="list-title">Вхід</p>
                             </li>
                         </ul>
-                        <ul className="footer__list">
+                        <ul className="footer__list menu">
                             <li className='footer__list-item'>
                                 <h2 className="list-title">Меню</h2>
                             </li>
@@ -107,37 +107,37 @@ const Footer = () => {
                                 <h2 className="list-title">Контакти</h2>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">Номер доставки <br />  +380 (63) 113 40 49</p>
+                                <p className="list-title">Номер доставки <br />  <span>+380 (63) 113 40 49</span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Галицька 15 <br /> +380 (63) 479 96 92</p>
+                                <p className="list-title">м. Львів, вул. Галицька 15 <br /><span> +380 (63) 479 96 92</span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Січових Стрільців 11 <br /> +38 (063) 790 54 50</p>
+                                <p className="list-title">м. Львів, вул. Січових Стрільців 11 <br /> <span> +38 (063) 790 54 50 </span> </p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м.Львів площа Міцкевича, 6/7 <br /> +38 (063) 425 26 03</p>
+                                <p className="list-title">м.Львів площа Міцкевича, 6/7 <br /><span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> +38 (063) 032 47 89</p>
+                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вулиця Садова 2а <br /> +38 (063) 830 16 57</p>
+                                <p className="list-title">м. Львів, вулиця Садова 2а <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Іоанна Павла ІІ, 4б (ринок «Шувар») <br /> +38 (063) 480 87 88</p>
+                                <p className="list-title">м. Львів, вул. Іоанна Павла ІІ, 4б (ринок «Шувар») <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вулиця Чернівецька, 11/13 <br /> +38 (050) 056 81 99</p>
+                                <p className="list-title">м. Львів, вулиця Чернівецька, 11/13 <br /><span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> +38 (063) 032 47 89</p>
+                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> +38 (063) 032 47 89</p>
+                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                             <li className='footer__list-item'>
-                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> +38 (063) 032 47 89</p>
+                                <p className="list-title">м. Львів, вул. Князя Романа 2 <br /> <span> +38 (063) 790 54 50 </span></p>
                             </li>
                         </ul>
                     </div>

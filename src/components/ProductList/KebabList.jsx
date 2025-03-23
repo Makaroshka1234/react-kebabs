@@ -20,6 +20,7 @@ const KebabList = () => {
         <section className="kebab-list">
             <div className="container">
                 <div className="kebab__list-inner">
+                    <p className="kebab-list-title">Найпопулярніші позиції</p>
                     <ul className='product__list'>
                         {Array.isArray(items) && items.map(item => (
 

@@ -58,12 +58,15 @@ const CartSide = ({ activeCart, setActiveCart }) => {
                         {cartItems.length <= 0 ? 'Ваша корзина порожня' : cartItems.map(item => (
                             <li key={item.id} className="cartside__list-item">
                                 <img src={item.imgUrl} alt="item" className='item-img' />
-                                <p className="item-title">{item.title}</p>
-                                <div className="item-counter">
-                                    <button className="plus-btn" onClick={() => dispatch(addCount(item))}  >+</button>
-                                    <input value={item.count} type="text" />
-                                    <button className='minus-btn' onClick={() => dispatch(removeCount(item))} >-</button>
+                                <div className="item-title-counter">
+                                    <p className="item-title">{item.title}</p>
+                                    <div className="item-counter">
+                                        <button className="plus-btn" onClick={() => dispatch(addCount(item))}  >+</button>
+                                        <input value={item.count} type="text" />
+                                        <button className='minus-btn' onClick={() => dispatch(removeCount(item))} >-</button>
+                                    </div>
                                 </div>
+
                                 <p className="item-price">{Number(item.price) * item.count}грн </p>
                                 <button
 

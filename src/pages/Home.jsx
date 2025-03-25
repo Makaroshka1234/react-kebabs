@@ -62,8 +62,8 @@ const Home = () => {
         <>
 
 
-            {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
-                : ''}
+            {/* {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
+                : ''} */}
 
 
             <div className="wrapper">

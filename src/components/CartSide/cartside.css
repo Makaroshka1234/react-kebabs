@@ -132,6 +132,12 @@
     gap: 5px;
 }
 
+.item-title-counter {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 .item-img {
     max-width: 120px;
     max-height: 90px;
@@ -164,8 +170,35 @@
     background-color: #fff;
 }
 
+@media (max-width:985px) {
+    .cardside {
+        width: 492px;
+    }
+
+    .cardside__bottom {
+        padding: 20px 10px;
+    }
+
+    .cardside_btn {
+        font-size: 1em;
+    }
+
+    .cardside-total {
+        font-size: 1.5em;
+    }
+}
+
 @media (max-width:503px) {
     .cardside {
         width: 100%;
+    }
+
+    .cardside__bottom {
+        flex-direction: column;
+    }
+
+    .item-title-counter {
+        flex-direction: column;
+        gap: 5px;
     }
 }

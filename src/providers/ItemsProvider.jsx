@@ -6,14 +6,9 @@ const ItemsContext = createContext();
 export const ItemsProvider = ({ children }) => {
     const category = ['кебаб', 'комбо меню', 'страви', 'соуси', 'напої', 'фрашиза кебабу'];
 
-    const cartItems = []
 
 
-    function addItemCart(item) {
-        cartItems.push(item)
-        console.log(cartItems, 'cart');
 
-    }
     const [activeCategory, setActiveCategory] = useState(null)
 
     const [items, setItems] = useState([])
@@ -21,7 +16,7 @@ export const ItemsProvider = ({ children }) => {
 
 
     return (
-        <ItemsContext.Provider value={{ items, setItems, category, activeCategory, setActiveCategory, cartItems, addItemCart }}>
+        <ItemsContext.Provider value={{ items, setItems, category, activeCategory, setActiveCategory, }}>
             {children}
         </ItemsContext.Provider>
     );

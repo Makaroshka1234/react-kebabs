@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
+
+import axios from 'axios'
+import { useItems } from '../providers/ItemsProvider'
+import { useNavigation } from 'react-router'
+
 import Header from '../components/Header/Header'
 import ProductList from '../components/ProductList/ProductList'
 import Footer from '../components/Footer/Footer'
 import CartSide from '../components/CartSide/CartSide'
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection'
-import axios from 'axios'
-import { useItems } from '../providers/ItemsProvider'
 import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
 import QuestionSection from '../components/QuestionSection/QuestionSection'
 import ReviewSection from '../components/ReviewSection/ReviewSection'
 import AnotherProductSection from '../components/AnotherProductSection/AnotherProductSection'
-import { useNavigation } from 'react-router'
 import SideMenu from '../components/futhers/SideMenu/SideMenu'
 import CityPopUp from '../components/futhers/CityPopUp/CityPopUp'
 
@@ -20,9 +22,10 @@ const Home = () => {
 
 
 
-    const [activePop, setActivePop] = useState(false)
+
 
     const BodyRef = React.useRef(document.body)
+
 
 
     const { items, setItems } = useItems()
@@ -33,7 +36,7 @@ const Home = () => {
             setItems(res.data)
 
         })
-        setActivePop(true)
+
     }, []);
 
     const [activeCart, setActiveCart] = React.useState(false)
@@ -57,8 +60,7 @@ const Home = () => {
         <>
 
 
-            {/* {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
-                : ''} */}
+
 
 
             <div className="wrapper">

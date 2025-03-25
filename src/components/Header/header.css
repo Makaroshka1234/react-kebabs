@@ -9,6 +9,17 @@
 
 }
 
+.header__location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.header__location svg {
+    fill: #D72200;
+}
 
 
 .header-logo {

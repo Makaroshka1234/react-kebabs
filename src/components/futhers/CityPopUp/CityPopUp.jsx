@@ -3,11 +3,12 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import './style.css'
 import react from 'react'
+import { useSelector } from 'react-redux'
 
 
 const CityPopUp = ({ activePop, setActivePop }) => {
 
-    const cities = ['Львів', 'Київ']
+    const { cities, activeCity } = useSelector(state => state.header)
 
     const popupRef = useRef(null);
 
@@ -50,7 +51,7 @@ const CityPopUp = ({ activePop, setActivePop }) => {
                     <p className="pop-description">Перш ніж розпочати своє замовлення, будь ласка, оберіть ваше місто. Це допоможе нам забезпечити вам найшвидше доставку та найсмачніші страви.</p>
                     <div className="drop-down">
                         <button className="drop-btn">
-                            <span>city</span>
+                            <span>{activeCity}</span>
                             <img src="" alt="" />
                         </button>
                         <ul className="city__list">
@@ -59,7 +60,7 @@ const CityPopUp = ({ activePop, setActivePop }) => {
                             })}
                         </ul>
                     </div>
-                    <button className='city-btn'>Обрати</button>
+                    <button className='city-btn' onClick={() => closePopUp()}>Обрати</button>
                 </div>
 
             </div>

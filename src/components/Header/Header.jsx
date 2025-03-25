@@ -1,36 +1,32 @@
 import React, { useEffect } from 'react'
-import './header.css'
-import BurgerMenu from './BurgerMenu'
-import { useItems } from '../../providers/ItemsProvider'
-import { Link, useParams } from 'react-router'
-import { useSelector } from 'react-redux'
 
+import { Link, useParams } from 'react-router'
+import { useDispatch, useSelector } from 'react-redux'
+
+import BurgerMenu from './BurgerMenu'
+
+import './header.css'
+import { setActiveCategory } from '../../redux/slices/HeaderSlice'
 
 
 
 
 
 const Category = () => {
-    const { category, activeCategory, setActiveCategory } = useItems()
+
+    const dispatch = useDispatch()
+    const { categoryUrl, category, activeCategory } = useSelector(state => state.header)
 
 
 
-    function logCat(id) {
-        setActiveCategory(id)
-        console.log(activeCategory);
 
 
-    }
-
-    let { categoryName } = useParams();
-
-    console.log(categoryName);
 
     return (
         <ul className="header__category-list">
             {category.map((category, catId) => (
-                <Link to={`/categories/${category}`}>
-                    <li key={catId} className={`header__list-item ${activeCategory === catId ? 'active' : ''}`} onClick={() => setActiveCategory(catId)} >
+                <Link to={`/categories/${categoryUrl[catId]}`}>
+                    <li key={catId} className={`header__list-item ${activeCategory === catId ? 'active' : ''}`} onClick={() => dispatch(setActiveCategory(catId))}  >
                         <img src="/images/kebab.svg" alt="" className="list-item-img" />
                         <p className="list-item-title" >{category}</p>
                     </li>
@@ -46,8 +42,8 @@ const Category = () => {
 
 const Header = ({ activeCart, setActiveCart }) => {
 
-    const { category, activeCategory, setActiveCategory } = useItems()
-
+    const dispatch = useDispatch()
+    const { categoryUrl, category, activeCategory, activeCity } = useSelector(state => state.header)
     const { totalPrice } = useSelector(state => state.cart)
 
 
@@ -63,10 +59,21 @@ const Header = ({ activeCart, setActiveCart }) => {
             <div className="header__inner">
 
                 <Link to="/">
-                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" onClick={() => setActiveCategory()} />
+                    <img src='/images/logo.svg' alt="logo-kebab" className="header-logo" onClick={() => dispatch(setActiveCategory(null))} />
                 </Link>
                 <Category />
-                <div className="header__location"></div>
+                <div className="header__location">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        viewBox="0 0 48 48"
+
+                    >
+                        <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                    </svg>
+                    <p className='location-city'>{activeCity}</p>
+                </div>
                 <div className="cart" >
                     <img src="/images/cart.svg" alt="" className="cart-img" onClick={addActive} />
                     <p className="cart-price">{totalPrice} грн</p>

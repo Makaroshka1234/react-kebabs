@@ -1,24 +1,27 @@
 import React from 'react'
+import axios from 'axios'
+
+import { useItems } from '../providers/ItemsProvider'
+import { useSelector } from 'react-redux'
 
 import Header from '../components/Header/Header'
 import ProductList from '../components/ProductList/ProductList'
 import Footer from '../components/Footer/Footer'
 import CartSide from '../components/CartSide/CartSide'
 import AdvantageSection from '../components/AdvantageSection/AdvantageSection'
-import axios from 'axios'
-
 import FranchiseSection from '../components/FranchiseSection/FranchiseSection'
-import { useItems } from '../providers/ItemsProvider'
 import SideMenu from '../components/futhers/SideMenu/SideMenu'
+
 
 
 const Category = () => {
 
-    const { items, setItems, activeCategory } = useItems()
+    const { items, setItems } = useItems()
 
+    const { activeCategory } = useSelector(state => state.header)
 
     React.useEffect(() => {
-        if (activeCategory !== undefined) {
+        if (activeCategory !== null) {
             axios.get(`https://67cdd8e7125cd5af7578fb16.mockapi.io/KebabItems/kebabs?category=${activeCategory}`).then(res => {
                 setItems(res.data)
             }

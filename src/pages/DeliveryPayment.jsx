@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from '../components/Header/Header'
 import CartSide from '../components/CartSide/CartSide'
 import Footer from '../components/Footer/Footer'

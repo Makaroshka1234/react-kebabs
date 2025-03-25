@@ -22,11 +22,13 @@ const Home = () => {
 
 
 
-
+    const [activePop, setActivePop] = useState(true)
 
     const BodyRef = React.useRef(document.body)
 
-
+    function closePopUp() {
+        setActivePop(false)
+    }
 
     const { items, setItems } = useItems()
 
@@ -60,7 +62,8 @@ const Home = () => {
         <>
 
 
-
+            {activePop ? <CityPopUp activePop={activePop} setActivePop={setActivePop} />
+                : ''}
 
 
             <div className="wrapper">

@@ -25,6 +25,6 @@ export const HeaderSlice = createSlice({
     },
 })
 
-export const { setActiveCategory } = HeaderSlice.actions
+export const { setActiveCategory, setActiveCity } = HeaderSlice.actions
 
 export default HeaderSlice.reducer

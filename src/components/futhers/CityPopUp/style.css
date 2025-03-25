@@ -73,9 +73,55 @@
 .pop-description {
     font-size: 1.1rem;
     max-width: 400px;
+    margin-bottom: 10px;
 }
 
-.drop-down {}
+.drop-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60px;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+
+
+.city__list {
+    display: none;
+
+}
+
+.city__list.active {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 3px;
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+
+}
+
+.city__list-item {
+    width: 100%;
+    padding: 20px 0;
+    border: 1px solid #111;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.drop-down {
+    margin-bottom: 30px;
+    max-width: 200px;
+    position: relative;
+}
 
 
 

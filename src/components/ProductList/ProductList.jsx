@@ -24,12 +24,17 @@ const ProductList = () => {
                     <ul className='product__list'>
                         {Array.isArray(items) && items.map(item => (
 
+
+
                             <li key={item.id} className="product__list-item">
                                 <img src={item.imgUrl} alt="" className='product-img' />
                                 <div className="list__item-inner">
                                     <Link to={`/product/` + item.id}>
                                         <p className='item-title'>{item.title}</p>
-                                        <p className="item-weight">{item.weight} г</p>
+                                        {
+                                            item.weight && <p className="item-weight">{item.weight}г </p>
+                                        }
+
                                         <p className="item-description">{item.description}</p>
                                     </Link>
                                     <div className="product__item-bottom">
@@ -38,7 +43,6 @@ const ProductList = () => {
                                             <div className="item-hour">
                                                 <img src="/images/clock.svg" alt="" className='item-clock-img' />
                                                 <p className='item-time-text'>{item.time} хвилин</p>
-
                                             </div>
 
                                         </div>

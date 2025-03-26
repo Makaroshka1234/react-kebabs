@@ -9,7 +9,7 @@ import AboutUs from './pages/AboutUs';
 import DeliveryPayment from './pages/DeliveryPayment';
 import Product from './pages/Product';
 import { useEffect, useState } from 'react';
-import ScrollTop from './components/ScrollTop';
+import ScrollTop from './utils/ScrollTop';
 
 import { Provider, useSelector } from 'react-redux'
 import { store } from './redux/store';
